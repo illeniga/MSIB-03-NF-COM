@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illeniga Qunita Fidin Tugas 6 JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="judul">
+            <h2>Informasi Gempa</h2>
+        </div>
+
+        <form action="" id="formulir">
+            <div class="form-group">
+                <p>Update berita terkini</p>
+                
+            </div>
+        <!-- script -->
+        <script>
+            class Gempa {
+                constructor(lokasi, skala) {
+                    this.lokasi = lokasi;
+                    this.skala = skala;
+                }
+                dampak() {
+                    let sk = this.skala;
+                    let kondisi = this.kondisi;
+                    let no = this.no;
+
+                    for (this.no=0; no<=10; no++); {return this.no}
+                    if (this.skala >= 0 && this.skala <= 2) this.kondisi = "Tidak terasa";
+                    else if (this.skala > 2 && this.skala <= 4) this.kondisi = "Bangunan retak-retak";
+                    else if (this.skala > 4 && this.skala <= 6) this.kondisi = "Bangunan roboh";
+                    else if (this.skala > 6) this.kondisi = "Bangunan roboh dan berpotensi tsunami";
+                    return this.skala;
+                    
+                   
+                }
+                infoGempa()   {
+                    document.write(`
+                    <div class="form-group">
+                        <label>NO</label>
+                        <input class="" type="text" name="a1" value="${this.no}" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label>Lokasi gempa</label>
+                        <input class="" type="text" name="a1" value="${this.lokasi}" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label>Skala Kekuatan</label>
+                        <input class="" type="text" name="a1" value="${this.dampak()} SR" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label>Dampak yang ditimbulkan</label>
+                        <input class="" type="text" name="a1" value="${this.kondisi}" disabled>
+                    </div>
+                    <hr>
+                    `);
+                } 
+                
+            }
+            /////////////////////////////////////////////////////////
+            //gunakan construktor class 
+            let G1 = new Gempa('Bagian barat laut', 3.4);
+            let G2 = new Gempa('Bagian Timur Laut', 4.0);
+            let G3 = new Gempa('Daerah Perkotaan', 4.8);
+            let G4 = new Gempa('Daerah Pantai', 3.5);
+            let G5 = new Gempa('Daerah Kawasan Hutan', 7);
+            let G6 = new Gempa('Perumahan Elite', 1);
+            let G7 = new Gempa('Kawasan Industri', 3.5);
+            let G8 = new Gempa('Kawasan Tambang', 4.2);
+            let G9 = new Gempa('Kawasan Persawahan', 3.4);
+            let G10 = new Gempa('Pegunungan', 3.8);
+            // cetak
+            G1.infoGempa();
+            G2.infoGempa();
+            G3.infoGempa();
+            G4.infoGempa();
+            G5.infoGempa();
+            G6.infoGempa();
+            G7.infoGempa();
+            G8.infoGempa();
+            G9.infoGempa();
+            G10.infoGempa();
+        </script>
+        <!--  -->
+        </form>
+    </div>
+
+</body>
+
+</html>
